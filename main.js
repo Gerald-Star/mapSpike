@@ -712,6 +712,9 @@ var carsLeft = 0,
 
 
     // When in multiple comparison values are in bracket
+    // using comparison operators LOGICAL AND 
+    
+    //and or OR in else if.
 
     // || both sides are false
     var carsLeft = 1,
@@ -733,7 +736,7 @@ var carsLeft = 0,
     }
 
 
-//For Loop
+//For Loop increment
     var register = ['FIRS', 'Tax', 'Finance', 'Agent'];
 
     for (var i = 0;  i < register.length; i++) 
@@ -741,10 +744,93 @@ var carsLeft = 0,
         console.log(register[i])
     }
 
-// i--
+// for loop . decrement
     var monitor = ['Away', 'Tax', 'Finance'];
 
     for (var i =  monitor.length - 1; i >=0; i-- ) 
     {
         console.log(monitor[i])
     }
+
+    // for in loop - using index
+
+    var monitorIn = ['Some', 'Income', 'Finance'];
+
+    for (var index  in monitorIn ) 
+    {
+        console.log(monitorIn[index])
+    }
+
+
+
+//DOM
+
+document.getElementById('gender').innerText += " Male";
+
+var pHello = document.getElementById('gender');
+
+pHello.innerText = "new world";
+pHello.innerText += " order";
+
+
+var el = document.getElementById('style');
+el.style.backgroundColor = "blue";
+el.style.color = "white";
+el.style.fontFamily = "Monospace";
+
+var gel = document.getElementById('gender');
+
+gel.innerText = "new world";
+gel.style.backgroundColor = "yellow";
+gel.style.color = "black";
+gel.style.fontFamily = "Monospace";
+gel.style.fontSize = "24px";
+gel.style.padding = "20px";
+
+//Styling this way is a lot more complicated.
+//Better styling below
+
+// var cla = document.getElementById('topic')
+
+// cla.topic.cssText = " backgroundColor:purple; color:white; fontFamily:monospace ";
+
+
+
+// to see all the css declaration on the console.
+// type symbol name - example el.style on the console.
+
+
+// How get computed styles by default.
+//getComputedStyle(el)
+
+var select = document.getElementsByName('cars')[0];
+
+select.onclick = function(e) {
+    console.log(e);
+};
+
+function ClickCallBack(e) {
+    console.log('click by add event listener');
+}
+
+select.addEventListener('click', ClickCallBack, false);
+select.removeEventListener('click', ClickCallBack);
+
+
+// How to create element from the DOM to render in the body
+// using document.createElement
+//using alert and appendChild
+
+var element = document.createElement('div');
+
+element.style.cssText = "width: 200px; height: 200px; background:blue;";
+
+element.onclick = function () { alert('hello'); };
+
+// document.body.appendChild( element );
+
+var target = document.getElementById('yellow');
+document.body.insertBefore( element, target);
+// this targets the element change from top to down. 
+
+
